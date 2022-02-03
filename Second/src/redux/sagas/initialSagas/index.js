@@ -9,7 +9,10 @@ function* auth() {
 }
 
 function* loadUsers() {
-  const request = yield call(fetch, "https://swapi.dev/api/people");
+  const request = yield call(
+    fetch,
+    "https://swapi.dev/api/people"
+  );
   const data = yield call([request, request.json]);
 
   console.log("data", data);
